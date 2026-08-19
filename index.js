@@ -8,7 +8,7 @@ app.post('/generate', async (req, res) => {
     try {
         const { prompt } = req.body;
         console.log("Generating music for:", prompt);
-        const response = await axios.post('https://huggingface.co', 
+        const response = await axios.post('https://huggingface.co', ...
             { inputs: prompt }, 
             { 
                 headers: { "Authorization": process.env.HF_TOKEN },
